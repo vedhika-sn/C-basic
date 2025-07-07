@@ -1,0 +1,64 @@
+/*
+The CEO of company ABC Inc wanted to encourage the employees coming on time to the office. So he announced that for every consecutive day an employee comes on time 
+in a week (starting from Monday to Saturday), he will be awarded Rs.200 more than the previous day as "Punctuality Incentive". The incentive I for the starting day (ie on Monday) 
+is passed as the input to the program. The number of days N an employee came on time consecutively starting from Monday is also passed as the input. The program must calculate and 
+print the "Punctuality Incentive" P of the employee.
+
+Input Format: The first line denotes the value of I. The second line denotes the value of N.
+
+Output Format: The first line denotes the value of P.
+
+Example Input/Output:
+Input:
+500
+3
+
+Output:
+2100
+
+Explanation: On Monday the employee receives Rs.500, on Tuesday Rs.700, on Wednesday Rs.900 So total = Rs.2100
+*/
+ {
+    int I, N;
+    cin >> I >> N;
+
+    int total = 0;
+    int daily = I;
+
+    for (int i = 0; i < N; ++i) {
+        total += daily;
+        daily += 200;
+    }
+
+    cout << total << endl;
+    return 0;
+}
+
+/*
+Baba is very kind to beggars and every day Baba donates half of the amount he has when ever a beggar requests him.
+The money M left in Baba's hand is passed as the input and the number of beggars B who received the alms are passed as the input.
+The program must print the money Baba had in the beginning of the day.
+Input Format:
+The first line denotes the value of M. The second line denotes the value of B.
+Output Format:
+The first line denotes the value of money with Baba in the beginning of the day.
+Example Input/Output:
+Input:
+100 2
+Output:
+400
+Explanation:
+Baba donated to two beggars. So when he encountered second beggar he had 100*2 = Rs.200 and when he encountered 1st he had 200*2 = Rs.400.
+*/
+
+{
+int m,b;
+cin>>m>>b;
+for(int i=0;i<b;i++)
+{
+    m=m*2;
+
+}
+cout<<m;
+
+}
